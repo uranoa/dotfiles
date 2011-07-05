@@ -1,0 +1,1 @@
+/home/uranoa/.vim/bundle/vim-pathogen/autoload/pathogen.vim

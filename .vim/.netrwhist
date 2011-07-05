@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/usr/share/iptables'
+let g:netrw_dirhist_2='/home/uranoa/.vim/bundle/vim-pathogen'
+let g:netrw_dirhist_3='/etc/php5/apache2'
+let g:netrw_dirhist_4='/etc/apache2/sites-enabled'
