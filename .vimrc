@@ -168,7 +168,7 @@ augroup cch
     autocmd WinEnter,BufRead * set cursorline
 augroup END
 
-colorscheme desertEx
+colorschem desertEx
 
 :hi clear CursorLine
 :hi CursorLine gui=underline
