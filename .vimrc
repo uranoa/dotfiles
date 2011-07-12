@@ -83,8 +83,6 @@ command! Eucjp edit ++enc=euc-jp
 command! Iso2022jp edit ++enc=iso-2022-jp
 command! Utf8 edit ++enc=utf-8
 
-
-
 set clipboard+=unnamed                       "ヤンクした文字は、システムのクリップボードへ"
 set title
 set formatoptions=lmoq                      "テキスト整形オプションにマルチバイト系を追加
@@ -170,6 +168,8 @@ augroup cch
     autocmd WinEnter,BufRead * set cursorline
 augroup END
 
+colorscheme desertEx
+
 :hi clear CursorLine
 :hi CursorLine gui=underline
 highlight CursorLine ctermbg=black guibg=black
@@ -197,9 +197,9 @@ set complete+=k
 "search
 ""
 set wrapscan            "最後まで検索したら先頭へ
-set ignorecase		    "検索時に大文字小文字を区別しない(ic) <-> noignorecase
-set smartcase	        "検索パターンに大文字が含まれていたら区別する(scs) <-> nosmartcase
-set incsearch		    "インクリメントサーチ(is)
+set ignorecase        "検索時に大文字小文字を区別しない(ic) <-> noignorecase
+set smartcase          "検索パターンに大文字が含まれていたら区別する(scs) <-> nosmartcase
+set incsearch        "インクリメントサーチ(is)
 set hlsearch          "ハイライトする(hls) <-> nohlsearch
 nmap n nzz
 nmap N Nzz
@@ -228,11 +228,11 @@ imap <C-k> <Up>
 imap <C-h> <Left>
 imap <C-l> <Right>
 
-inoremap  (   ()<LEFT>
-inoremap  [   []<LEFT>
-inoremap  {   {}<LEFT>
-inoremap  '   ''<LEFT>
-inoremap  "   ""<LEFT>
+"inoremap  (   ()<LEFT>
+"inoremap  [   []<LEFT>
+"inoremap  {   {}<LEFT>
+"inoremap  '   ''<LEFT>
+"inoremap  "   ""<LEFT>
 
 "-----------------------------------------------------------------------------
 "key bind
