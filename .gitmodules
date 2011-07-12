@@ -43,3 +43,6 @@
 [submodule ".vim/bundle/vim_faq"]
 	path = .vim/bundle/vim_faq
 	url = git://github.com/vim-scripts/vim_faq.git
+[submodule ".vim/colors/warez-colorscheme"]
+	path = .vim/colors/warez-colorscheme
+	url = git://github.com/vim-scripts/warez-colorscheme.git
