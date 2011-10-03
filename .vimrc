@@ -177,7 +177,9 @@ highlight CursorLine ctermbg=black guibg=black
 "保存時に行末の空白を削除
 autocmd BufWritePre * :%s/\s\+$//ge
 "保存時にtabをスペースに変換する
-autocmd BufWritePre * :%s/\t/  /ge
+autocmd BufWritePre * :%s/\t/    /ge
+"保存時にdos改行をunix改行へ変換
+autocmd BufWritePre * :%s/\r+$//ge
 
 "全角スペースの表示
 highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=darkgray
@@ -212,7 +214,7 @@ nmap <RIGHT> <ESC>
 nmap <UP> <ESC>
 nmap <LEFT> <ESC>
 "Escの2回押しでハイライト消去
-nmap <ESC><ESC> ;nohlsearch<CR><ESC>
+nnoremap <ESC><ESC> :nohlsearch<CR>
 "Ctrl-hjklでウインドウ移動
 nnoremap <C-j> ; <C-w>j
 nnoremap <C-k> ; <C-k>j
@@ -227,6 +229,10 @@ imap <C-j> <Down>
 imap <C-k> <Up>
 imap <C-h> <Left>
 imap <C-l> <Right>
+
+"フレームサイズをテンキーの+ & -で変更  動作せず...
+"map <kPlus> <C-W>+
+"map <kMinus> <C-W>-
 
 "inoremap  (   ()<LEFT>
 "inoremap  [   []<LEFT>
@@ -270,7 +276,7 @@ let g:neocomplcache_min_syntax_length = 3
 " neocomplcacheを自動的にロックするバッファ名のパターン
 let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
 " -入力による候補番号の表示
-let g:neocomplcache_enable_quick_match = 1
+"let g:neocomplcache_enable_quick_match = 1
 " 補完候補の一番先頭を選択状態にする(AutoComplPopと似た動作)
 let g:neocomplcache_enable_auto_select = 1
 
